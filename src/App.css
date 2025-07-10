@@ -245,3 +245,7 @@
     transform: translateY(-3px);
   }
 }
+
+.map-view {
+  padding-top: 50px;
+}
