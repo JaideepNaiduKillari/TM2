@@ -116,7 +116,7 @@
 }
 
 .pin-input h2::after {
-  content: '🔐';
+  content: '📍';
   display: block;
   font-size: 2.5rem;
   margin: 0.5rem 0 1rem 0;
