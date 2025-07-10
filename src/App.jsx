@@ -18,8 +18,8 @@ function App() {
       const currentTime = new Date().getTime()
       const authTime = parseInt(storedTime)
       
-      // Check if 2 minutes (120000 ms) have passed
-      if (currentTime - authTime < 120000) {
+      
+      if (currentTime - authTime < 900000) {
         setAuthenticated(true)
         setMarkerPosition(pinData[storedPin])
       } else {
@@ -36,13 +36,13 @@ function App() {
       localStorage.setItem('authenticatedPin', pin)
       localStorage.setItem('authTime', new Date().getTime().toString())
       
-      // Clear authentication after 2 minutes
+      
       setTimeout(() => {
         localStorage.removeItem('authenticatedPin')
         localStorage.removeItem('authTime')
         setAuthenticated(false)
         setPin('')
-      }, 120000) // 2 minutes
+      }, 900000) 
     } else {
       alert('Invalid PIN')
     }
