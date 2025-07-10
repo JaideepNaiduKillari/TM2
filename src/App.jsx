@@ -72,12 +72,14 @@ function App() {
               Search
             </button>
           </div>
-          
+
+          <div className="map-view">
           <img
             src={showSearch ? searchMap : map}
             alt="Map"
             className="map-image"
           />
+          </div>
           
           {!showSearch && (
             <div
